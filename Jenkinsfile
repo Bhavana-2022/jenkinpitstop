@@ -18,6 +18,15 @@ pipeline {
             steps{
                 sh 'dotnet build src/pitstop.sln'
             }
+        stage(publishBuildInfo) {
+            steps{
+                  rtPublishBuildInfo (
+                    serverId: 'newinstance'
+
+              )
+            }
+        }
+
 
 
         }
