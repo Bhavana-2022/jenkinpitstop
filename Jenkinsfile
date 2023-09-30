@@ -16,7 +16,7 @@ pipeline {
         }
         stage('build') {
             steps{
-                sh script: 'src/pitstop.sln'
+                sh script: 'pipeline/src/pitstop.sln'
             }
 
 
