@@ -8,7 +8,7 @@ pipeline {
     stages{
         stage('vcs'){
            steps{
-               git url: 'https://github.com/Bhavana-2022/jenkinpitstop.git'
+               git url: 'https://github.com/Bhavana-2022/jenkinpitstop.git',
                    branch: 'main'
 
         
