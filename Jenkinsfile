@@ -12,25 +12,26 @@ pipeline {
                    branch: 'main'
 
         
-           }
+            }
         }
-        stage('build') {
+        stage('build'){
             steps{
                 sh 'dotnet build src/pitstop.sln'
             }
-        stage(publishBuildInfo) {
+        }    
+        stage(publishBuildInfo){
             steps{
                   rtPublishBuildInfo (
                     serverId: 'newinstance'
 
-              )
+                )
             }
         }
 
 
 
-        }
-    
     }
-}    
+    
+}
+    
 
