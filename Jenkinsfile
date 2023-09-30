@@ -16,7 +16,7 @@ pipeline {
         }
         stage('build') {
             steps{
-                sh 'dotnet build pipeline/src/pitstop.sln'
+                sh 'dotnet build src/pitstop.sln'
             }
 
 
